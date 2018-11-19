@@ -126,6 +126,12 @@ public class IntegrationTests
         var publicMethod = type.GetMethod("PublicMethod");
         Assert.False(publicMethod.ContainsHideAttribute());
 
+        var protectedMethod = type.GetMethod("ProtectedMethod");
+        Assert.True(protectedMethod.ContainsHideAttribute());
+
+        var protectedInternalMethod = type.GetMethod("ProtectedInternalMethod");
+        Assert.True(protectedInternalMethod.ContainsHideAttribute());
+
         var privateMethod = type.GetMethod("PrivateMethod");
         Assert.True(privateMethod.ContainsHideAttribute());
 

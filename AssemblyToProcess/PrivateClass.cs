@@ -41,4 +41,12 @@ class PrivateClass
     public void PublicMethod()
     {
     }
+
+    protected internal void ProtectedMethod()
+    {
+    }
+
+    protected internal void ProtectedInternalMethod()
+    {
+    }
 }

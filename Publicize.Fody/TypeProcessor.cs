@@ -93,6 +93,21 @@ public partial class ModuleWeaver
             method.IsPrivate = false;
             requiresPublicize = true;
         }
+        if (method.IsFamily)
+        {
+            method.IsFamily = false;
+            requiresPublicize = true;
+        }
+        if (method.IsFamilyOrAssembly)
+        {
+            method.IsFamilyOrAssembly = false;
+            requiresPublicize = true;
+        }
+        if (method.IsFamilyAndAssembly)
+        {
+            method.IsFamilyAndAssembly = false;
+            requiresPublicize = true;
+        }
 
         if (requiresPublicize)
         {
